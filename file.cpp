@@ -26,6 +26,7 @@ int main()
   while(cin>>number) list.push_back(number);
   printf("Sum of list = %d\n", SumList(list));
   printf("Product of list = %d\n", ProductList(list));
+  // Reverse of user input list
   vector<int> reversedList = ReversedList(list);
   printf("Reversed List Result\n");
   for(int i = 0; i < reversedList.size(); i++){
