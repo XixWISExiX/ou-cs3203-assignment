@@ -13,6 +13,11 @@ int ProductList(vector<int> v){
   for(int i:v) sum*=i;
   return sum;
 }
+vector<int> ReversedList(vector<int> v){
+  vector<int> a;
+  for(int i = v.size()-1; i >= 0; i--) a.push_back(v[i]);
+  return a;
+}
 int main()
 {
   printf("When done entering numbers, type \"i\", and then enter.\n");
@@ -21,5 +26,11 @@ int main()
   while(cin>>number) list.push_back(number);
   printf("Sum of list = %d\n", SumList(list));
   printf("Product of list = %d\n", ProductList(list));
+  // Reverse of user input list
+  vector<int> reversedList = ReversedList(list);
+  printf("Reversed List Result\n");
+  for(int i = 0; i < reversedList.size(); i++){
+    printf("Element %d is value %d\n", i, reversedList[i]);
+  }
   return 0;
 }
